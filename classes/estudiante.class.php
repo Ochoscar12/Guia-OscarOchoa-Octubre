@@ -54,7 +54,7 @@ class Estudiante{
     //metodo para obtener los registros de todos los estudiantes 
     public function obtenerEstudiantes(){
         $resultado = $this->conexion->run('SELECT * FROM estudiante;');
-        $array =array("mensaje"=>"Registros encontrados","Valores"=>$resultado->fetch());
+        $array =array("mensaje"=>"Registros encontrados","Valores"=>$resultado->fetchAll());
         return $array;
     }
 

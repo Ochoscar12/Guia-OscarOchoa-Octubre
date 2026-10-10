@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     //EVALUO EL VALOR DEL PARAMETRO
     switch($tipo_peticion){
         case"selectAll":
-            $resultado = $Estudiante->obtenerEstudiante();
+            $resultado = $Estudiante->obtenerEstudiantes();
         break;
         case "select":
             $id = ((isset($_GET["id"])) ? (($_GET["id"]!="") ? intval($_GET["id"]) : 0): 0); //OBTENGO EL VALOR DEL PARAMETRO id
